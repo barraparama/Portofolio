@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portofolio – Albarra Omar Parama</title>
+  <meta name="description" content="Portofolio siswa SMA – Science & Calon Dokter." />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --panel: #ffffff;
+      --panel-2: #f0f9ff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #3b82f6;
+      --accent-2: #10b981;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Montserrat, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background: 
+        radial-gradient(circle at 1px 1px, rgba(59,130,246,0.15) 1px, transparent 0),
+        linear-gradient(180deg, #e0f2fe 0%, #ffffff 50%, #ecfdf5 100%);
+      background-size: 24px 24px, auto;
+    }
+    .container { width: min(1120px, 92vw); margin-inline: auto; }
+    header { position: sticky; top: 0; background: rgba(255,255,255,.9); backdrop-filter: blur(6px); border-bottom: 1px solid rgba(0,0,0,.06); z-index: 100; }
+    .nav { display:flex; justify-content:space-between; align-items:center; padding:14px 0; }
+    .brand { display:flex; gap:8px; align-items:center; font-weight:800; }
+    .badge-icon { background: var(--accent-2); border-radius:8px; padding:6px; color:white; }
+    .menu { display:flex; gap:18px; }
+    .menu a { text-decoration:none; color:var(--text); font-weight:600; transition: color .2s; }
+    .menu a:hover { color:var(--accent); }
+    .menu a.active { color: var(--accent-2); border-bottom: 2px solid var(--accent-2); padding-bottom: 2px; }
+    .hero { padding:72px 0; position:relative; overflow:hidden; }
+    .hero::after {
+      content:"🧬";
+      font-size:160px;
+      position:absolute;
+      right:20px; bottom:-20px;
+      opacity:0.08;
+      transform: rotate(-15deg);
+    }
+    .hero-grid { display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:center; }
+    .hero-card { background: var(--panel); padding:22px; border-radius:16px; box-shadow:0 10px 20px rgba(0,0,0,.05); }
+    .avatar { width:240px; aspect-ratio:1/1; overflow:hidden; border-radius:50%; margin:auto; box-shadow:0 0 0 6px rgba(59,130,246,.2); }
+    .avatar img { width:100%; height:100%; object-fit:cover; }
+    .section { padding:48px 0; }
+    .title { display:flex; align-items:center; gap:10px; margin-bottom:18px; }
+    .title h2 { margin:0; font-size:24px; }
+    .skills-grid { display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); }
+    .chip { background: var(--panel-2); padding:10px; border-radius:12px; font-weight:600; }
+    .projects-grid { display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); }
+    .card { background: var(--panel); border-radius:16px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,.05); }
+    .card .thumb {
+      background:#dbeafe;
+      text-align:center;
+      padding:0;
+    }
+    .card .thumb img {
+      width:100%;
+      height:180px;
+      object-fit:cover;
+      display:block;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .card .thumb img:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+    .card .body { padding:14px; }
+    footer { text-align:center; padding:20px; color:var(--muted); }
+    ul { padding-left: 20px; }
+    form { display:grid; gap:12px; max-width:480px; margin-top:16px; }
+    input, textarea {
+      padding:10px;
+      border-radius:8px;
+      border:1px solid #ccc;
+      font-family: inherit;
+    }
+    button {
+      padding:10px;
+      border:none;
+      border-radius:8px;
+      background:var(--accent);
+      color:white;
+      font-weight:600;
+      cursor:pointer;
+    }
+    button:hover { background:#2563eb; }
+    .contact-info p {
+      display:flex;
+      align-items:center;
+      gap:8px;
+      margin:6px 0;
+    }
+    .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container nav">
+      <div class="brand">
+        <span class="badge-icon">🩺</span>
+        Albarra Omar Parama
+      </div>
+      <div class="menu">
+        <a href="#about">About</a>
+        <a href="#education">Pendidikan</a>
+        <a href="#skills">Skill</a>
+        <a href="#projects">Proyek</a>
+        <a href="#competitions">Lomba</a>
+        <a href="#contact">Kontak</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero container" id="about">
+    <div class="hero-grid">
+      <div class="hero-card">
+        <h1>Halo, saya <span style="color:var(--accent)">Albarra Omar Parama</span></h1>
+        <p>Pelajar SMA dengan minat pada <strong>sains, teknologi, dan dunia medis</strong>.  
+        Bercita-cita menjadi dokter sekaligus aktif di riset dan inovasi digital.</p>
+      </div>
+      <div class="avatar">
+        <img src="weirdahhpp.jpeg" alt="Foto Albarra Omar Parama">
+      </div>
+    </div>
+  </section>
+
+  <!-- Pendidikan -->
+  <section class="section container" id="education">
+    <div class="title">📚 <h2>Pendidikan</h2></div>
+    <ul>
+      <li>SD Saim Surabaya</li>
+      <li>SMP Al-Azhar 13 Surabaya</li>
+      <li>SMA Negeri 5 Surabaya</li>
+    </ul>
+  </section>
+
+  <!-- Skill -->
+  <section class="section container" id="skills">
+    <div class="title">🔬 <h2>Skill Teknis & Akademik</h2></div>
+    <div class="skills-grid">
+      <div class="chip">Biologi</div>
+      <div class="chip">Kimia</div>
+      <div class="chip">Fisika</div>
+      <div class="chip">HTML & CSS</div>
+      <div class="chip">JavaScript</div>
+      <div class="chip">Python</div>
+    </div>
+  </section>
+
+  <!-- Proyek -->
+  <section class="section container" id="projects">
+    <div class="title">🥼 <h2>Proyek Terpilih</h2></div>
+    <div class="projects-grid">
+      <div class="card">
+        <div class="thumb">
+          <img src="poster.png" alt="Proyek Biologi">
+        </div>
+        <div class="body"><h3>Riset Mini Biologi</h3><p>Pengaruh cahaya terhadap pertumbuhan tanaman kacang hijau.</p></div>
+      </div>
+      <div class="card">
+        <div class="thumb">
+          <img src="bmi.png" alt="Proyek Aplikasi BMI">
+        </div>
+        <div class="body"><h3>Aplikasi BMI</h3><p>Aplikasi sederhana untuk menghitung indeks massa tubuh.</p></div>
+      </div>
+      <div class="card">
+        <div class="thumb">
+          <img src="aplikasi.png" alt="Proyek UI Medis">
+        </div>
+        <div class="body"><h3>Desain Aplikasi Medis</h3><p>UI konsep aplikasi konsultasi kesehatan.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lomba -->
+  <section class="section container" id="competitions">
+    <div class="title">🏆 <h2>Lomba & Prestasi</h2></div>
+    <ul>
+      <li>Juara 2 Olimpiade Sains Kota Surabaya (Biologi) (Insyaallah)</li>
+      <li>Finalis Lomba Inovasi Teknologi Remaja Tingkat Provinsi (Insyaallah)</li>
+      <li>Juara Harapan 1 Lomba Poster Kesehatan Nasional (Insyaallah)</li>
+      <li>Peserta Lomba Koding Python untuk Pelajar se-Indonesia (Insyaallah)</li>
+    </ul>
+  </section>
+
+  <!-- Kontak -->
+  <section class="section container" id="contact">
+    <div class="title"><h2>Kontak</h2></div>
+    <div class="contact-info">
+      <p>👤 <strong>Nama:</strong> Albarra Omar Parama</p>
+      <p>🏫 <strong>Sekolah:</strong> SMA Negeri 5 Surabaya</p>
+      <p>📧 <strong>Email:</strong> <a href="mailto:barraparama@gmail..com">barraparama@gmail.com</a></p>
+      <p>📍 <strong>Lokasi:</strong> Surabaya</p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Form -->
+      <div>
+        <h3 style="margin-top:24px;">Kirim Pesan</h3>
+        <form>
+          <input type="text" name="nama" placeholder="Nama Anda" required>
+          <input type="email" name="email" placeholder="Email Anda" required>
+          <textarea name="pesan" placeholder="Tulis pesan Anda..." rows="5" required></textarea>
+          <button type="submit">Kirim</button>
+        </form>
+      </div>
+
+      <!-- Google Maps -->
+      <div>
+        <h3 style="margin-top:24px;">Lokasi Saya</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.8583089710614!2d112.74758167587991!3d-7.2569622712956185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f965579d3379%3A0x72f98abfcb7b7876!2sSenior%20High%20School%20State%205%20of%20Surabaya!5e0!3m2!1sen!2sid!4v1756970640300!5m2!1sen!2sid"
+       	 width="100%" height="300" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Albarra Omar Parama
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Highlight menu aktif saat scroll
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".menu a");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.classList.toggle(
+              "active",
+              link.getAttribute("href").substring(1) === entry.target.id
+            );
+          });
+        }
+      });
+    }, { threshold: 0.6 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
